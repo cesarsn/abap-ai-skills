@@ -1,5 +1,5 @@
 ---
-name: abap-unit-test-skill-test-double
+name: abap-unit-test-doubles
 description: This document defines how to use Test doubles for ABAP Unit testing when code under test (CUT) has external dependencies (Database or function modules).
 ---
 
