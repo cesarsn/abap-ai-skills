@@ -7,20 +7,23 @@ description: This document defines how to use Test doubles for ABAP Unit testing
 
 ## Overview
 
-This skills helps me to create proper test doubles using standard test double framework when CUT has database of function module dependencies
+This skills helps me to create proper test doubles using standard test double framework when CUT has database or function module dependencies
 
 ## Instructions
 
 ### Case 1: Open SQL Test Double Framework (OSQL)
-**Trigger:** If CUT uses database operations (`SELECT`, `INSERT`, `UPDATE`, `MODIFY`, `DELETE`).
+* **Trigger:** CUT performs database operations (`SELECT`, `INSERT`, `UPDATE`, `MODIFY`, `DELETE`) or queries CDS Views.
+* **Key Framework APIs:**
+	* Setup: `cl_osql_test_environment=>create( i_dependency_list = VALUE #( ( 'table_or_cds' ) ) )`
+	* Insert Mock Data: `environment->insert_test_data( it_data )`
+	* Teardown: `environment->destroy( )` / Clear: `environment->clear_doubles( )`
+* **Reference File:** `OSQL_TEST_DEMO.ABAP`
 
-#### Generation instructions:
-1. **Mandatory reference:** Use as technical blueprint reference file 'OSQL_TEST_DEMO.ABAP'. Ask to be added to the context if you do not have access.
-
----
-
-### Case 2:Function Test Double Framework (FTD)
-**Trigger:** If CUT uses sentence `CALL FUNCTION`.
-
-#### Generation instructions:
-1. **Mandatory reference:** Use as technical blueprint reference file 'FTD_TEST_DEMO.ABAP'. Ask to be added to the context if you do not have access.
+### Case 2: Function Test Double Framework (FTD)
+* **Trigger:** CUT executes `CALL FUNCTION`.
+* **Key Framework APIs:**
+  * Setup: `cl_function_test_environment=>create( VALUE #( ( 'FM_NAME' ) ) )`
+  * Double Config: `function_test_environment->get_double( 'FM_NAME' )`
+  * Behavior: `configure_call( )->when( input_config )->then_set_output( output_config )`
+  * Clear: `function_test_environment->clear_doubles( )`
+* **Reference File:** `FTD_TEST_DEMO.ABAP`
