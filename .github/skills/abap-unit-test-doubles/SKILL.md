@@ -18,8 +18,8 @@ This skills helps me to create proper test doubles using standard test double fr
 	* Insert Mock Data: `environment->insert_test_data( it_data )`
 	* Teardown: `environment->destroy( )` / Clear: `environment->clear_doubles( )`
 * **Reference Files:** 
-	* CUT source: `CUT_OSQL.ABAP`
-	* ABAP Unit Test source: `TEST_OSQL.ABAP`
+	* CUT source: `./references/CUT_OSQL.ABAP`
+	* ABAP Unit Test source: `./references/TEST_OSQL.ABAP`
 
 ### Case 2: Function Test Double Framework (FTD)
 * **Trigger:** CUT executes `CALL FUNCTION`.
@@ -29,5 +29,5 @@ This skills helps me to create proper test doubles using standard test double fr
   * Behavior: `configure_call( )->when( input_config )->then_set_output( output_config )`
   * Clear: `function_test_environment->clear_doubles( )`
 * **Reference Files:** 
-	* CUT source: `CUT_FTD.ABAP`
-	* ABAP Unit Test source: `TEST_FTD.ABAP`
+	* CUT source: `./references/CUT_FTD.ABAP`
+	* ABAP Unit Test source: `./references/TEST_FTD.ABAP`
