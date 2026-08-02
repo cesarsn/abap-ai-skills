@@ -13,8 +13,10 @@ This skills helps me to create proper test doubles using standard test double fr
 
 ### Case 1: Open SQL Test Double Framework (OSQL)
 * **Trigger:** CUT performs database operations (`SELECT`, `INSERT`, `UPDATE`, `MODIFY`, `DELETE`) or queries CDS Views.
-* **In references you have an example file: 'TEST_OSQL.ABAP'**
+* ** Generation instructions:**
+1. **Mandatory reference:** Use as technical blueprint reference file 'test-osql.abap'.
 
 ### Case 2: Function Test Double Framework (FTD)
 * **Trigger:** CUT executes `CALL FUNCTION`.
-* **In references you have an example file: 'TEST_FTD.ABAP'** 
+* ** Generation instructions:**
+1. **Mandatory reference:** Use as technical blueprint reference file 'test-ftd.abap'.
