@@ -12,4 +12,12 @@ This skills helps me to write ABAP Unit Tests in a consistent way across the pro
 ## Instructions
 
 ### Rule 1: Avoid Magic Numbers and Strings in Unit Tests
-* **Rule:** You are creating auxiliary variables in your unit test for representing test data. For example, you are creating a variable for a test customer. Name this constanta as CV_ANY_CUSTOMER or LV_ANY_CUSTOMER. The prefix CV_ is used for constants and LV_ for local variables. The ANY keyword is used to indicate that this variable can represent any customer, not a specific one.
+* **Rule:** You are creating auxiliary variables in your unit test for representing test data. For example, you are creating a variable for a test customer. Name this constants/variables as CV_ANY_CUSTOMER or LV_ANY_CUSTOMER. The prefix CV_ is used for constants and LV_ for local variables. The ANY keyword is used to indicate that this variable can represent any customer, not a specific one.
+
+### Rule 2: Consider the maximum length of test method names
+* **Rule:** test method names should have at most 30 characters.
+
+### Rule 3: Activate objects before executing unit tests
+* **Rule:** If you have access to a test execution and ABAP object activation tools, activate class and test include before executing the tests.
+
+
