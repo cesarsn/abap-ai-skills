@@ -11,15 +11,21 @@ This skills helps me to write ABAP Unit Tests in a consistent way across the pro
 
 ## Instructions
 
-### Rule 1: Avoid Magic Numbers and Strings in Unit Tests
-* **Rule:** You are creating auxiliary variables in your unit test for representing test data. For example, you are creating a variable for a test customer. Name this constants/variables as CV_ANY_CUSTOMER or LV_ANY_CUSTOMER. The prefix CV_ is used for constants and LV_ for local variables. The ANY keyword is used to indicate that this variable can represent any customer, not a specific one.
+### Rule 1: Naming conventions
+* **Rule:** 
+	* Use LTC_<class test name> for local test classes.
+	* Use LTD_<class test double name> for local test doubles classes
+	* Use LTH_<class test helper class> for local test helper classes
 
-### Rule 2: Consider the maximum length of test method names
+### Rule 2: Avoid Magic Numbers and Strings in Unit Tests
+* **Rule:** You are creating auxiliary variables in your unit test for representing test data. Give to these variables meaningful names. For example, you are creating a variable for a test customer and the customer code is not relevant and any can be used, name variable as CV_ANY_CUSTOMER or LV_ANY_CUSTOMER (CV_ is used for constants and LV_ for local variables).Other example can be CV_ANY_OTHER_CUSTOMER if two customers are required for the process.
+
+### Rule 3: Consider the maximum length of test method names
 * **Rule:** test method names should have at most 30 characters. Include a comment in method definition previous to method name with a summary of the test intent. Example:
     "Test creation of a travel with no bookings or supplements
     METHODS tc_create_100_ok FOR TESTING.
 
-### Rule 3: Activate objects before executing unit tests
-* **Rule:** If you have access to a test execution and ABAP object activation tools, activate class and test include before executing the tests.
+### Rule 4: Activate objects before executing unit tests
+* **Rule:** Before executing unit test always activate CUT and test include.
 
 
