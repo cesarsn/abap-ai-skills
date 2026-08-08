@@ -7,7 +7,7 @@ description: This document defines the guidelines for writing ABAP Unit Tests in
 
 ## Overview
 
-This skills helps me to write ABAP Unit Tests in a consistent way across the project. It provides guidelines for writing unit tests, including naming conventions, test structure, and best practices.
+This skill helps me to write ABAP Unit Tests in a consistent way across the project. It provides guidelines for writing unit tests, including naming conventions, test structure, and best practices.
 
 ## Instructions
 

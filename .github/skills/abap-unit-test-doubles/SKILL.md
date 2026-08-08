@@ -7,7 +7,7 @@ description: This document defines how to use Test doubles for ABAP Unit testing
 
 ## Overview
 
-This skills helps me to create proper test doubles using standard test double framework when CUT has database or function module dependencies
+This skill helps me to create proper test doubles using standard test double framework when CUT has database or function module dependencies
 
 ## Instructions
 
