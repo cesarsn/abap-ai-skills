@@ -18,7 +18,7 @@ This skill helps me to write ABAP Unit Tests in a consistent way across the proj
 	* Use LTH_<class test helper class> for local test helper classes
 
 ### Rule 2: Avoid Magic Numbers and Strings in Unit Tests
-* **Rule:** You are creating auxiliary variables in your unit test for representing test data. Give these variables meaningful names. For example, you are creating a variable for a test customer and the customer code is not relevant and any can be used, name variable as CV_ANY_CUSTOMER or LV_ANY_CUSTOMER (CV_ is used for constants and LV_ for local variables).Other example can be CV_ANY_OTHER_CUSTOMER if two customers are required for the process.
+* **Rule:** You are creating auxiliary variables in your unit test for representing test data. Give these variables meaningful names. For example, you are creating a variable for a test customer and the customer code is not relevant and any can be used, name variable as CV_ANY_CUSTOMER or LV_ANY_CUSTOMER (CV_ is used for constants and LV_ for local variables). Another example would be CV_ANY_OTHER_CUSTOMER if two customers are required for the process.
 
 ### Rule 3: Consider the maximum length of test method names
 * **Rule:** test method names should have at most 30 characters. Include a comment in method definition previous to method name with a summary of the test intent. Example:
